@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Login</title> 
+    <style> 
+        body { 
+            background-color: #e1f5fe; /* Light blue background */ 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+        } 
+        .container { 
+            background-color: #ffffff; /* White background */ 
+            padding: 40px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+            text-align: center; 
+            width: 300px; 
+        } 
+        input { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 10px 0; 
+
+ 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+        } 
+        button { 
+            background-color: #00796b; /* Teal button */ 
+            color: white; 
+            padding: 10px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+            width: 100%; 
+        } 
+        button:hover { 
+            background-color: #004d40; /* Darker teal on hover */ 
+        } 
+ 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+        <h1>Login</h1> 
+        <input type="text" id="username" placeholder="Enter your name" required> 
+        <button onclick="register()">Continue</button> 
+    </div> 
+ 
+    <script> 
+        function register() { 
+            const username = document.getElementById("username").value; 
+            if (username) { 
+                localStorage.setItem("username", username); 
+                window.location.href = "front.html"; // Redirect to registration page 
+            } else { 
+                alert("Please enter your name."); 
+
+ 
+            } 
+        } 
+    </script> 
+</body> 
+</html>

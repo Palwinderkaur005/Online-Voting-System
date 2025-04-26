@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Voting Dashboard</title> 
+    <style> 
+        body { 
+            background-color: #e0f7fa; /* Light blue background */ 
+            color: #00695c; /* Dark teal text color */ 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+        } 
+        .container { 
+            text-align: center; 
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */ 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+            width: 90%; 
+            max-width: 500px; 
+        } 
+        h1 {  
+ 
+            font-size: 2.5em; 
+            margin-bottom: 20px; 
+        } 
+        button { 
+            background-color: #00796b; /* Teal button */ 
+            color: white; 
+            padding: 10px 15px; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 1.1em; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+            margin: 10px 0; /* Space between buttons */ 
+            width: 100%; /* Full width */ 
+        } 
+        button:hover { 
+            background-color: #004d40; /* Darker teal on hover */ 
+        } 
+        a { 
+            text-decoration: none; 
+            color: #00695c; /* Link color */ 
+            display: inline-block; 
+            margin-top: 20px; 
+            font-size: 1em; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+        <h1>Voting Dashboard</h1> 
+        <p>Welcome, <span id="userName"></span>!</p> 
+        <button onclick="checkVotingStatus()">Check Voting Status</button> 
+        <button onclick="castVote()">Cast Your Vote</button> 
+        <button onclick="goToGuidelines()">Voting Guidelines</button> 
+
+ 
+        <button onclick="goToAbout()">About</button> 
+        <button onclick="goToContact()">Contact Us</button> 
+        <button onclick="logout()">Logout</button> 
+    </div> 
+ 
+    <script> 
+        // Load the username from local storage and display it 
+        window.onload = function() { 
+            const username = localStorage.getItem("username"); 
+            document.getElementById("userName").innerText = username || "User"; 
+        }; 
+ 
+        // Redirect functions for different sections 
+        function checkVotingStatus() { 
+            window.location.href = "check-status.html"; // Redirect to check status page 
+        } 
+ 
+        function castVote() { 
+            window.location.href = "vote.html"; // Redirect to voting page 
+        } 
+ 
+         
+ 
+        function goToGuidelines() { 
+            window.location.href = "voting-guidelines.html"; // Redirect to guidelines 
+        } 
+ 
+        function goToAbout() { 
+            window.location.href = "about.html"; // Redirect to about page 
+        } 
+ 
+        function goToContact() { 
+            window.location.href = "contact-us.html"; // Redirect to contact page 
+        } 
+
+ 
+        function logout() { 
+            localStorage.removeItem("username"); // Clear username from local storage 
+            window.location.href = "index.html"; // Redirect to login page 
+        } 
+    </script> 
+</body> 
+</html> 

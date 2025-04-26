@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Check Voting Status</title> 
+    <style> 
+        body { 
+            background-color: #e0f7fa; /* Light blue background */ 
+            color: #00695c; /* Dark teal text color */ 
+            display: flex; 
+
+ 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+        } 
+        .container { 
+            text-align: center; 
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */ 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+            width: 90%; 
+            max-width: 400px; 
+        } 
+        h1 { 
+            font-size: 2em; 
+            margin-bottom: 20px; 
+        } 
+        button { 
+            background-color: #00796b; /* Teal button */ 
+            color: white; 
+            padding: 10px 15px; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 1.1em; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+            margin-top: 10px; 
+            width: 100%; /* Full width */ 
+        } 
+        button:hover { 
+            background-color: #004d40; /* Darker teal on hover */ 
+        } 
+ 
+        p { 
+            font-size: 1.2em; /* Slightly larger text for status */ 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+        <h1>Check Voting Status</h1> 
+        <p id="statusMessage">Loading...</p> <!-- Status message will be displayed here --> 
+        <button onclick="goBack()">Go Back to Dashboard</button> 
+    </div> 
+ 
+    <script> 
+        // Simulating an API call to check voting status 
+        window.onload = function() { 
+            // Get the username from local storage 
+            const username = localStorage.getItem("username"); 
+            if (username) { 
+                // Simulating a voting status retrieval 
+                const votingStatus = "Active"; // Placeholder for actual status 
+                document.getElementById("statusMessage").innerText = `${username}, your voting 
+status is: ${votingStatus}`; 
+            } else { 
+                document.getElementById("statusMessage").innerText = "No user logged in."; 
+            } 
+        }; 
+ 
+        function goBack() { 
+            window.location.href = "voting-dashboard.html"; // Redirect to dashboard 
+        } 
+    </script> 
+</body> 
+</html>

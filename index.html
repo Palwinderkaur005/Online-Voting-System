@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Voter Registration</title> 
+    <style> 
+        body { 
+            background-color: #e0f7fa; /* Light blue background */ 
+            color: rgb(33, 56, 71); /* Text color */ 
+
+ 
+            display: flex; 
+            justify-content: center; /* Center horizontally */ 
+            align-items: center; /* Center vertically */ 
+            height: 100vh; /* Full height */ 
+            margin: 0; /* Remove default margin */ 
+            font-family: Arial, sans-serif; /* Font style */ 
+        } 
+        .container { 
+            text-align: center; /* Center text within the container */ 
+            background-color: rgba(82, 115, 129, 0.8); /* Semi-transparent background */ 
+            padding: 30px; /* Add some padding */ 
+            border-radius: 15px; /* Rounded corners */ 
+            box-shadow: 0 4px 30px rgba(65, 112, 109, 0.5); /* Shadow effect */ 
+            width: 90%; /* Responsive width */ 
+            max-width: 400px; /* Max width */ 
+        } 
+        h1 { 
+            margin-bottom: 20px; /* Space below the title */ 
+            font-size: 2.5em; /* Title size */ 
+        } 
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"], 
+        input[type="number"] { 
+            width: 100%; /* Full width */ 
+            padding: 10px; /* Padding inside inputs */ 
+            margin: 10px 0; /* Space between inputs */ 
+            border: none; /* Remove default border */ 
+            border-radius: 5px; /* Rounded corners */ 
+            font-size: 1em; /* Font size */ 
+        } 
+        input[type="radio"] { 
+            margin: 0 5px; /* Space around radio buttons */ 
+        } 
+ 
+ 
+        button { 
+            background-color: #28a745; /* Green background */ 
+            color: white; /* White text */ 
+            padding: 10px 15px; /* Padding */ 
+            border: none; /* Remove default border */ 
+            border-radius: 5px; /* Rounded corners */ 
+            font-size: 1.1em; /* Font size */ 
+            cursor: pointer; /* Pointer cursor on hover */ 
+            transition: background-color 0.3s ease; /* Transition effect */ 
+        } 
+        button:hover { 
+            background-color: #218838; /* Darker green on hover */ 
+        } 
+        footer { 
+            margin-top: 20px; /* Space above footer */ 
+            font-size: 0.9em; /* Smaller font for footer */ 
+            color: #ffffff; /* White text for footer */ 
+        } 
+        footer a { 
+            color: #ffffff; /* White links */ 
+            text-decoration: none; /* No underline */ 
+            margin: 0 10px; /* Space between links */ 
+        } 
+        footer a:hover { 
+            text-decoration: underline; /* Underline on hover */ 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+        <h1>Voter Registration</h1> 
+        <p>Please register to participate in the voting system.</p> 
+        <form id="registrationForm"> 
+            <label for="fullname">Full Name:</label><br> 
+
+ 
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" 
+required><br> 
+            <label for="age">Age:</label><br> 
+            <input type="number" id="age" name="age" placeholder="Enter your age" 
+required><br> 
+            <label for="gender">Gender:</label><br> 
+            <input type="radio" id="male" name="gender" value="Male" required> Male 
+            <input type="radio" id="female" name="gender" value="Female" required> 
+Female<br> 
+            <label for="voterid">Voter ID:</label><br> 
+            <input type="text" id="voterid" name="voterid" placeholder="Enter your voter ID" 
+required><br> 
+            <label for="email">Email:</label><br> 
+            <input type="email" id="email" name="email" placeholder="Enter your email" 
+required><br> 
+            <label for="password">Password:</label><br> 
+            <input type="password" id="password" name="password" placeholder="Create a 
+password" required><br> 
+            <button type="submit">Register</button> 
+        </form> 
+        <footer> 
+            <p> 
+                <a href="voting-dashboard.html">Go to Dashboard</a> 
+                |  
+                <a href="check-status.html">Check Voting Status</a> 
+                |  
+                <a href="voting-guidelines.html">Voting Guidelines</a> 
+                |  
+                <a href="contact-us.html">Contact Us</a> 
+            </p> 
+        </footer> 
+    </div> 
+    <script> 
+
+ 
+        document.getElementById("registrationForm").addEventListener("submit", 
+function(event) { 
+            event.preventDefault(); // Prevent the default form submission 
+            alert("Registration successful!"); // Alert to confirm registration 
+            window.location.href = "confirm.html"; // Redirect to confirmation page 
+        }); 
+    </script> 
+</body> 
+</html>

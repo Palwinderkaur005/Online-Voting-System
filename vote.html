@@ -1,0 +1,217 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Cast Your Vote</title> 
+    <style> 
+        body { 
+            background-color: #e1f5fe; /* Light blue background */ 
+            color: #212121; /* Dark text color for better readability */ 
+            font-family: 'Arial', sans-serif; 
+            margin: 0; 
+            padding-top: 40px; /* Space at the top */ 
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-start; /* Align items to the start */ 
+            height: 100vh; 
+        } 
+        .container { 
+            background-color: #ffffff; /* White background for the container */ 
+            border-radius: 10px; 
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); 
+ 
+ 
+            padding: 40px; 
+            width: 90%; 
+            max-width: 900px; /* Increased max width */ 
+            text-align: center; 
+            transition: transform 0.3s; /* Animation for hover */ 
+        } 
+        .container:hover { 
+            transform: translateY(-5px); /* Slight lift on hover */ 
+        } 
+        h1 { 
+            font-size: 2.8em; /* Larger title size */ 
+            margin-bottom: 30px; 
+            color: #1976d2; /* Blue color for the title */ 
+        } 
+        .candidate { 
+            display: flex; 
+            margin: 20px 0; /* Space between candidates */ 
+            padding: 20px; 
+            border-radius: 8px; /* Rounded corners */ 
+            background-color: #f9fbe7; /* Light background for candidates */ 
+            transition: background-color 0.3s, transform 0.3s; /* Animation on hover */ 
+            align-items: center; /* Center candidate content */ 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */ 
+        } 
+        .candidate:hover { 
+            background-color: #e1f5fe; /* Change background color on hover */ 
+            transform: scale(1.02); /* Slightly enlarge on hover */ 
+        } 
+ 
+        .candidate img { 
+            width: 100px; /* Increased logo size */ 
+            height: 100px; 
+            margin-right: 20px; /* Space between image and text */ 
+            border-radius: 50%; /* Make logos circular */ 
+
+ 
+            border: 2px solid #1976d2; /* Border for logos */ 
+        } 
+ 
+        .candidate-details { 
+            text-align: left; /* Left align text for better readability */ 
+            flex-grow: 1; /* Allow details to take remaining space */ 
+        } 
+        .party { 
+            font-weight: bold; /* Bold for party affiliation */ 
+            color: #d32f2f; /* Color for party */ 
+        } 
+ 
+        .bio { 
+            font-size: 0.95em; /* Smaller font for biography */ 
+            color: #555; /* Grey color for biography text */ 
+            margin-top: 5px; /* Space above biography */ 
+            line-height: 1.5; /* Improved line height for readability */ 
+        } 
+ 
+        button { 
+            background-color: #388e3c; /* Green button */ 
+            color: white; 
+            padding: 15px 30px; /* Padding for the button */ 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 1.2em; /* Slightly larger font size for button */ 
+            cursor: pointer; 
+            transition: background-color 0.3s, transform 0.3s; /* Transition effects */ 
+            margin-top: 30px; /* Space above button */ 
+            width: 100%; /* Full-width button */ 
+        } 
+ 
+        button:hover { 
+            background-color: #2e7d32; /* Darker green on hover */ 
+ 
+ 
+            transform: translateY(-2px); /* Lift effect on hover */ 
+        } 
+ 
+        /* Responsive adjustments */ 
+        @media (max-width: 600px) { 
+            h1 { 
+                font-size: 2em; /* Responsive title size */ 
+            } 
+            .candidate img { 
+                width: 80px; /* Responsive logo size */ 
+                height: 80px; 
+            } 
+ 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+        <h1>Cast Your Vote</h1> 
+        <form id="voteForm"> 
+            <div class="candidate"> 
+                <img src="future-vision-party-logo.jpeg" alt="Candidate 1 Logo"> <!-- Candidate 1 
+logo --> 
+                <div class="candidate-details"> 
+                    <label> 
+                        <input type="radio" name="candidate" value="candidate1" required> Candidate 
+1 (Future Vision Party) 
+                    </label> 
+                    <p class="party">Party: Future Vision Party</p> 
+                    <p>Candidate 1 focuses on economic development and innovative technology.</p> 
+                    <p class="bio">Biography: Experienced leader dedicated to modernizing 
+infrastructure.</p> 
+                    <a href="https://futurevisionparty.com" target="_blank" style="color: 
+#1976d2;">Learn more</a> 
+ 
+ 
+                </div> 
+            </div> 
+            <div class="candidate"> 
+                <img src="green-earth-alliance-logo.png" alt="Candidate 2 Logo"> <!-- Candidate 
+2 logo --> 
+                <div class="candidate-details"> 
+                    <label> 
+                        <input type="radio" name="candidate" value="candidate2" required> Candidate 
+2 (Green Earth Alliance) 
+                    </label> 
+                    <p class="party">Party: Green Earth Alliance</p> 
+                    <p>Candidate 2 advocates for environmental sustainability and renewable 
+energy.</p> 
+                    <p class="bio">Biography: Passionate about combating climate change and 
+promoting green policies.</p> 
+                    <a href="https://greenearthalliance.com" target="_blank" style="color: 
+#1976d2;">Learn more</a> 
+                </div> 
+            </div> 
+            <div class="candidate"> 
+                <img src="progressive-change-party-logo.png" alt="Candidate 3 Logo"> <!-- 
+Candidate 3 logo --> 
+                <div class="candidate-details"> 
+                    <label> 
+                        <input type="radio" name="candidate" value="candidate3" required> Candidate 
+3 (Progressive Change Party) 
+                    </label> 
+                    <p class="party">Party: Progressive Change Party</p> 
+                    <p>Candidate 3 promotes social justice and economic equality.</p> 
+                    <p class="bio">Biography: Community activist focused on reforming social 
+policies.</p> 
+                    <a href="https://progressivechangeparty.com" target="_blank" style="color: 
+#1976d2;">Learn more</a> 
+                </div> 
+ 
+ 
+            </div> 
+            <div class="candidate"> 
+                <img src="united-citizens-party-logo.jpeg" alt="Candidate 4 Logo"> <!-- Candidate 
+4 logo --> 
+                <div class="candidate-details"> 
+                    <label> 
+                        <input type="radio" name="candidate" value="candidate4" required> Candidate 
+4 (United Citizens Party) 
+                    </label> 
+                    <p class="party">Party: United Citizens Party</p> 
+                    <p>Candidate 4 aims to improve healthcare and public services.</p> 
+                    <p class="bio">Biography: Former healthcare professional advocating for 
+accessible health services.</p> 
+                    <a href="https://unitedcitizensparty.com" target="_blank" style="color: 
+#1976d2;">Learn more</a> 
+                </div> 
+            </div> 
+            <div class="candidate"> 
+                <img src="independents-for-change-logo.jpeg" alt="Candidate 5 Logo"> <!-- 
+Candidate 5 logo --> 
+                <div class="candidate-details"> 
+                    <label> 
+                        <input type="radio" name="candidate" value="candidate5" required> Candidate 
+5 (Independents for Change) 
+                    </label> 
+                    <p class="party">Party: Independents for Change</p> 
+                    <p>Candidate 5 focuses on grassroots movements and community 
+engagement.</p> 
+                    <p class="bio">Biography: Local leader known for empowering the community 
+and grassroots initiatives.</p> 
+                    <a href="https://independentsforchange.com" target="_blank" style="color: 
+#1976d2;">Learn more</a> 
+                </div> 
+            </div> 
+ 
+ 
+            <button type="submit">Submit Vote</button> 
+        </form> 
+    </div> 
+ 
+    <script> 
+        document.getElementById("voteForm").addEventListener("submit", function(event) { 
+            event.preventDefault(); 
+            alert("Your vote has been cast!"); 
+            window.location.href = "voting-dashboard.html"; // Redirect to dashboard 
+        }); 
+    </script> 
+</body> 
+</html> 

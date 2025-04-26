@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contact Us</title> 
+    <style> 
+        body { 
+            background-color: #e0f7fa; /* Light blue background */ 
+            color: #212121; /* Dark text color */ 
+            font-family: 'Arial', sans-serif; 
+            margin: 0; 
+            padding: 40px; /* Space at the top */ 
+            text-align: center; /* Center text */ 
+        } 
+        h1 { 
+            font-size: 2.5em; /* Title size */ 
+            color: #1976d2; /* Blue color for the title */ 
+            margin-bottom: 20px; /* Space below title */ 
+        } 
+        p { 
+            font-size: 1.1em; /* Standard text size */ 
+            line-height: 1.6; /* Improved line height for readability */ 
+            margin: 10px 0; /* Space between paragraphs */ 
+ 
+        } 
+        form { 
+            max-width: 600px; /* Max width for the form */ 
+            margin: 20px auto; /* Center the form */ 
+            text-align: left; /* Align form text to the left */ 
+            background-color: #ffffff; /* White background for the form */ 
+            border-radius: 10px; /* Rounded corners */ 
+            padding: 20px; /* Padding inside form */ 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */ 
+        } 
+        input[type="text"], 
+        input[type="email"], 
+        textarea { 
+            width: 100%; /* Full width */ 
+            padding: 10px; /* Padding inside inputs */ 
+            margin: 10px 0; /* Space between inputs */ 
+            border: 1px solid #ccc; /* Light grey border */ 
+            border-radius: 5px; /* Rounded corners */ 
+            font-size: 1em; /* Font size */ 
+        } 
+        button { 
+            background-color: #388e3c; /* Green button */ 
+            color: white; /* White text */ 
+            padding: 10px 15px; /* Padding for button */ 
+            border: none; /* Remove default border */ 
+            border-radius: 5px; /* Rounded corners */ 
+            font-size: 1.1em; /* Font size */ 
+            cursor: pointer; /* Pointer cursor on hover */ 
+            transition: background-color 0.3s ease; /* Transition effect */ 
+            width: 100%; /* Full-width button */ 
+        } 
+        button:hover { 
+            background-color: #2e7d32; /* Darker green on hover */ 
+        } 
+ 
+        footer { 
+            margin-top: 20px; /* Space above footer */ 
+            font-size: 0.9em; /* Smaller font for footer */ 
+        } 
+        footer a { 
+            color: #1976d2; /* Blue links */ 
+            text-decoration: none; /* No underline */ 
+            margin: 0 10px; /* Space between links */ 
+        } 
+        footer a:hover { 
+            text-decoration: underline; /* Underline on hover */ 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h1>Contact Us</h1> 
+    <p>If you have any questions or need assistance, please fill out the form below, and we'll 
+get back to you as soon as possible.</p> 
+     
+    <form id="contactForm"> 
+        <label for="name">Name:</label> 
+        <input type="text" id="name" name="name" placeholder="Your Name" required> 
+         
+        <label for="email">Email:</label> 
+        <input type="email" id="email" name="email" placeholder="Your Email" required> 
+         
+        <label for="message">Message:</label> 
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" 
+required></textarea> 
+         
+        <button type="submit">Send Message</button> 
+    </form> 
+ 
+    <footer> 
+ 
+        <p> 
+            <a href="voting-dashboard.html">Go to Dashboard</a> 
+            |  
+            <a href="registration.html">Register</a> 
+            |  
+            <a href="check-status.html">Check Voting Status</a> 
+            |  
+            <a href="voting-guidelines.html">Voting Guidelines</a> 
+        </p> 
+    </footer> 
+ 
+    <script> 
+        document.getElementById("contactForm").addEventListener("submit", function(event) { 
+            event.preventDefault(); // Prevent the default form submission 
+            alert("Thank you for your message! We will get back to you soon."); // Alert for 
+confirmation 
+            // You can add further actions here, such as sending the form data to a server 
+        }); 
+    </script> 
+</body> 
+</html>
